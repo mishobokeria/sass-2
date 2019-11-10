@@ -8,6 +8,7 @@
       .nav-li {
         margin-left: $size02;
         .nav-a {
+          font-family: $font02;
           color: rgb(53, 112, 112);
           font-size: $size03;
         }
@@ -23,11 +24,12 @@
   .wraper-box {
     @include border(2px, solid, $color01);
     @include d-flex(flex, space-around, center);
-    height: 400px;
+    height: $size06;
     img {
       height: 100%;
     }
     p {
+      font-family: $font01;
       margin-left: $size02;
     }
   }
@@ -36,4 +38,31 @@
 .responsive-box {
   background: $color03;
   padding: $size03;
+  .container {
+    h1 {
+      font-family: $font01;
+      font-size: $size03;
+      margin-bottom: $size02;
+    }
+    .d-flex {
+      @include size(780px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      // img {
+      //   width: 100%;
+      // }
+
+      p {
+        font-size: $size04;
+        color: $color02;
+        width: plus(50px, 300px);
+        @media screen and (max-width: 1024px) {
+          font-size: $size02;
+          color: $color03;
+        }
+      }
+    }
+  }
 }

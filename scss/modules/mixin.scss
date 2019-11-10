@@ -6,3 +6,16 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin size($size) {
+  @if $size == 1024px {
+    background: $color02;
+    padding: $size05;
+  } @else if $size == 780px {
+    background: $color04;
+    padding: $size01;
+  } @else {
+    padding: $size03;
+    background: $color03;
+  }
+}

@@ -1,0 +1,39 @@
+.container {
+  @extend %container;
+  background: $color04;
+  padding: $size02;
+  .nav {
+    .d-flex {
+      @extend %d-flex;
+      .nav-li {
+        margin-left: $size02;
+        .nav-a {
+          color: rgb(53, 112, 112);
+          font-size: $size03;
+        }
+      }
+    }
+  }
+}
+
+.grey-bg {
+  background: grey;
+  margin-top: $size03;
+  padding: $size04;
+  .wraper-box {
+    @include border(2px, solid, $color01);
+    @include d-flex(flex, space-around, center);
+    height: 400px;
+    img {
+      height: 100%;
+    }
+    p {
+      margin-left: $size02;
+    }
+  }
+}
+
+.responsive-box {
+  background: $color03;
+  padding: $size03;
+}
